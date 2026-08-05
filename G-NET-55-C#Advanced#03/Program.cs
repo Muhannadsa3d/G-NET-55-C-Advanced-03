@@ -41,6 +41,47 @@
             //foreach (var s in gradeStrings) Console.WriteLine(s);
 
             #endregion
+            #region Exercise 2: Leaderboard
+        //    SortedDictionary<int, string> leaderboard = new()
+        //{
+        //    {500, "Ahmed"},
+        //    {200, "Sara"},
+        //    {800, "Ali"},
+        //    {350, "Mona"}
+        //};
+
+        //    // Print all entries (sorted by score automatically)
+        //    Console.WriteLine("--- Leaderboard ---");
+        //    foreach (var entry in leaderboard)
+        //    {
+        //        Console.WriteLine($"{entry.Key} = {entry.Value}");
+        //    }
+
+        //    // Access the first key and first value
+        //    int firstKey = leaderboard.Keys.Min();
+        //    string firstValue = leaderboard[firstKey];
+        //    Console.WriteLine($"\nFirst Key: {firstKey}, First Value: {firstValue}");
+
+        //    // Check if score 500 exists
+        //    bool has500 = leaderboard.ContainsKey(500);
+        //    Console.WriteLine("\nScore 500 exists? " + has500);
+
+        //    // Safely get the player with score 999
+        //    if (leaderboard.TryGetValue(999, out string player999))
+        //        Console.WriteLine("\nPlayer with score 999: " + player999);
+        //    else
+        //        Console.WriteLine("\nPlayer with score 999 not found.");
+
+        //    // Remove the player with score 200
+        //    leaderboard.Remove(200);
+
+        //    // Print updated list
+        //    Console.WriteLine("\n--- Updated Leaderboard ---");
+        //    foreach (var entry in leaderboard)
+        //    {
+        //        Console.WriteLine($"{entry.Key} = {entry.Value}");
+        //    }
+            #endregion
         }
     }
 }
