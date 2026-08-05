@@ -165,45 +165,79 @@
             //    Console.WriteLine("\nIs {1,2} subset of A? " + subset.IsSubsetOf(setA));
             #endregion
             #region Exercise 5: Print Queue Simulator
-        
-            
-                // 1. Create a Queue<string> and enqueue 5 documents
-                Queue<string> printQueue = new();
-                printQueue.Enqueue("Report.pdf");
-                printQueue.Enqueue("Invoice.pdf");
-                printQueue.Enqueue("Letter.docx");
-                printQueue.Enqueue("Resume.pdf");
-                printQueue.Enqueue("Photo.jpg");
 
-                // 2. Print the queue contents and Count
-                Console.WriteLine("--- Print Queue ---");
-                foreach (var doc in printQueue)
-                {
-                    Console.WriteLine(doc);
-                }
-                Console.WriteLine("Count: " + printQueue.Count);
+            //// 1. Create a Queue<string> and enqueue 5 documents
+            //Queue<string> printQueue = new();
+            //printQueue.Enqueue("Report.pdf");
+            //printQueue.Enqueue("Invoice.pdf");
+            //printQueue.Enqueue("Letter.docx");
+            //printQueue.Enqueue("Resume.pdf");
+            //printQueue.Enqueue("Photo.jpg");
 
-                // 3. Use Peek to see which document will print next
-                Console.WriteLine("\nNext to print (Peek): " + printQueue.Peek());
+            //// 2. Print the queue contents and Count
+            //Console.WriteLine("--- Print Queue ---");
+            //foreach (var doc in printQueue)
+            //{
+            //    Console.WriteLine(doc);
+            //}
+            //Console.WriteLine("Count: " + printQueue.Count);
 
-                // 4. Process the queue: Dequeue each document
-                Console.WriteLine("\n--- Processing Queue ---");
-                while (printQueue.Count > 0)
-                {
-                    string doc = printQueue.Dequeue();
-                    Console.WriteLine("Printing: " + doc);
-                }
+            //// 3. Use Peek to see which document will print next
+            //Console.WriteLine("\nNext to print (Peek): " + printQueue.Peek());
 
-                // 5. Try TryDequeue on the now-empty queue
-                if (printQueue.TryDequeue(out string result))
-                {
-                    Console.WriteLine("\nPrinting: " + result);
-                }
-                else
-                {
-                    Console.WriteLine("\nQueue is empty, nothing to dequeue.");
-                }
+            //// 4. Process the queue: Dequeue each document
+            //Console.WriteLine("\n--- Processing Queue ---");
+            //while (printQueue.Count > 0)
+            //{
+            //    string doc = printQueue.Dequeue();
+            //    Console.WriteLine("Printing: " + doc);
+            //}
+
+            //// 5. Try TryDequeue on the now-empty queue
+            //if (printQueue.TryDequeue(out string result))
+            //{
+            //    Console.WriteLine("\nPrinting: " + result);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("\nQueue is empty, nothing to dequeue.");
+            //}
             #endregion
-            }
+            #region Exercise 6: Browser History (Undo)
+            //Stack<string> history = new();
+
+            //// 2. Push 5 URLs
+            //history.Push("google.com");
+            //history.Push("github.com");
+            //history.Push("stackoverflow.com");
+            //history.Push("youtube.com");
+            //history.Push("claude.ai");
+
+            //// 3. Use Peek to see the current page (top of stack)
+            //Console.WriteLine("Current page (Peek): " + history.Peek());
+
+            //// 4. Press "back" 3 times using Pop
+            //Console.WriteLine("\n--- Going Back ---");
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    string leftPage = history.Pop();
+            //    Console.WriteLine("Leaving: " + leftPage);
+            //}
+
+            //// 5. Print the current page after going back
+            //Console.WriteLine("\nCurrent page after back: " + history.Peek());
+
+            //// 6. Try TryPop on an empty stack
+            //history.Clear(); // نفرغ الستاك علشان نجرب TryPop
+            //if (history.TryPop(out string result))
+            //{
+            //    Console.WriteLine("\nPopped: " + result);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("\nStack is empty, nothing to pop.");
+            //}
+            #endregion
+        }
     }
 }
