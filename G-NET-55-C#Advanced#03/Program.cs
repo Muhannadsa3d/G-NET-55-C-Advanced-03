@@ -84,47 +84,85 @@
             #endregion
             #region Exercise 3: Phone Book
 
-        //    // 1. Create a Collection with 4 contacts
-        //    Dictionary<string, string> phoneBook = new()
+            //    // 1. Create a Collection with 4 contacts
+            //    Dictionary<string, string> phoneBook = new()
+            //{
+            //    {"Ahmed", "0105000000"},
+            //    {"Sara", "0102000000"},
+            //    {"Ali", "0108000000"},
+            //    {"Mona", "0103500000"}
+            //};
+
+            //    // 2. Add a new contact using [] syntax (add or update)
+            //    phoneBook["Omar"] = "0109999999"; // لو مش موجود يضيف، لو موجود يحدث
+
+            //    // 3. Try adding a duplicate using .Add() — catch the exception
+            //    try
+            //    {
+            //        phoneBook.Add("Ahmed", "0111111111");
+            //    }
+            //    catch (ArgumentException ex)
+            //    {
+            //        Console.WriteLine("Error: " + ex.Message);
+            //    }
+
+            //    // 4. Try adding a duplicate using .TryAdd()
+            //    bool added = phoneBook.TryAdd("Ahmed", "0111111111");
+            //    Console.WriteLine("TryAdd Ahmed succeeded? " + added);
+
+            //    // 5. Search for a contact that doesn’t exist
+            //    if (phoneBook.ContainsKey("Youssef"))
+            //        Console.WriteLine("Youssef found: " + phoneBook["Youssef"]);
+            //    else
+            //        Console.WriteLine("Youssef not found.");
+
+            //    // 6. Get a contact with a fallback of "Not Found"
+            //    string result = phoneBook.GetValueOrDefault("Nada", "Not Found");
+            //    Console.WriteLine("Nada: " + result);
+
+            //    // 7. Print all Keys on one line
+            //    Console.WriteLine("\nContacts: " + string.Join(", ", phoneBook.Keys));
+
+            //    // 8. Print all Values on another line
+            //    Console.WriteLine("Numbers: " + string.Join(", ", phoneBook.Values));
+            #endregion
+            #region Exercise 4: Unique Email Validator
+        //    HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         //{
-        //    {"Ahmed", "0105000000"},
-        //    {"Sara", "0102000000"},
-        //    {"Ali", "0108000000"},
-        //    {"Mona", "0103500000"}
+        //    "ahmed@test.com",
+        //    "AHMED@test.com",
+        //    "sara@test.com",
+        //    "Sara@Test.Com"
         //};
 
-        //    // 2. Add a new contact using [] syntax (add or update)
-        //    phoneBook["Omar"] = "0109999999"; // لو مش موجود يضيف، لو موجود يحدث
+        //    // Print Count
+        //    Console.WriteLine("Email Count: " + emails.Count);
 
-        //    // 3. Try adding a duplicate using .Add() — catch the exception
-        //    try
-        //    {
-        //        phoneBook.Add("Ahmed", "0111111111");
-        //    }
-        //    catch (ArgumentException ex)
-        //    {
-        //        Console.WriteLine("Error: " + ex.Message);
-        //    }
+        //    // Explain why
+        //    Console.WriteLine("Explanation: HashSet ignores duplicates (case-insensitive), so only 2 unique emails are stored.");
 
-        //    // 4. Try adding a duplicate using .TryAdd()
-        //    bool added = phoneBook.TryAdd("Ahmed", "0111111111");
-        //    Console.WriteLine("TryAdd Ahmed succeeded? " + added);
+        //    // 2. Create two sets
+        //    HashSet<int> setA = new() { 1, 2, 3, 4, 5 };
+        //    HashSet<int> setB = new() { 4, 5, 6, 7, 8 };
 
-        //    // 5. Search for a contact that doesn’t exist
-        //    if (phoneBook.ContainsKey("Youssef"))
-        //        Console.WriteLine("Youssef found: " + phoneBook["Youssef"]);
-        //    else
-        //        Console.WriteLine("Youssef not found.");
+        //    // UnionWith
+        //    HashSet<int> union = new(setA);
+        //    union.UnionWith(setB);
+        //    Console.WriteLine("\nUnion: " + string.Join(", ", union));
 
-        //    // 6. Get a contact with a fallback of "Not Found"
-        //    string result = phoneBook.GetValueOrDefault("Nada", "Not Found");
-        //    Console.WriteLine("Nada: " + result);
+        //    // IntersectWith
+        //    HashSet<int> intersect = new(setA);
+        //    intersect.IntersectWith(setB);
+        //    Console.WriteLine("Intersection: " + string.Join(", ", intersect));
 
-        //    // 7. Print all Keys on one line
-        //    Console.WriteLine("\nContacts: " + string.Join(", ", phoneBook.Keys));
+        //    // ExceptWith
+        //    HashSet<int> except = new(setA);
+        //    except.ExceptWith(setB);
+        //    Console.WriteLine("Except (A - B): " + string.Join(", ", except));
 
-        //    // 8. Print all Values on another line
-        //    Console.WriteLine("Numbers: " + string.Join(", ", phoneBook.Values));
+        //    // IsSubsetOf
+        //    HashSet<int> subset = new() { 1, 2 };
+        //    Console.WriteLine("\nIs {1,2} subset of A? " + subset.IsSubsetOf(setA));
             #endregion
         }
     }
